@@ -10,3 +10,4 @@ echo "PID OF script :$$"
 sleep 10  &
 
 echo " background process of the recently task :$!"
+echo "arguements passed to script : $*"
