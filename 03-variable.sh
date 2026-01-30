@@ -6,5 +6,5 @@ echo "script executed in $TIMESTAMP"
 
 sleep 10
 
-ENDTIME =$(date)
+ENDTIME=$(date)
 echo " end time is $ENDTIME "
