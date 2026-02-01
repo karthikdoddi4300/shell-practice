@@ -13,3 +13,4 @@ echo " installing nginx ........failure"
 
 else
 echo " installing nginx succcess "
+fi
