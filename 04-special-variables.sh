@@ -11,3 +11,5 @@ sleep 10  &
 
 echo " background process of the recently task :$!"
 echo "arguements passed to script : $*"
+# very imp exit codes  of the previous command
+echo "exit status of the previous command : $?"
