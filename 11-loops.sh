@@ -20,7 +20,7 @@ VALIDATE(){
     fi
 }
 
-for package in $@
+for package in $@ # sh 11-lopps.sh myswl nginx java python 
 do 
     dnf install $package -y  &>> $LOGS_FILE
     VALIDATE $? "$package installattion"
