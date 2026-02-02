@@ -22,8 +22,14 @@ VALIDATE(){
 
 for package in $@ # sh 11-lopps.sh myswl nginx java python 
 do 
-    dnf install $package -y  &>> $LOGS_FILE
-    VALIDATE $? "$package installattion"
+    dnf  list installed  $package &>> $LOGS_FILE
+    if [ $? -ne 0]; then 
+        echo "$package is not installed ,installing right now "
+        dnf install $package -y  &>> $LOGS_FILE
+        VALIDATE $? "$package installattion"
+    else 
+        echo "$package is already installed ,skipping "
+    fi 
 done
 
 
