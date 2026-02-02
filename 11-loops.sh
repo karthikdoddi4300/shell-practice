@@ -1,15 +1,15 @@
 #!/bin/bash
 
 #while installin a software ,we have to be in root user
-
+userid=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="/var/log/shell-script/$0.log"
-userid=$(id -u)
 if [ $userid -ne 0  ]; then 
 echo " please run this script with root access"
 exit 1
 fi
-mkdir -p LOGS_FOLDER
+
+mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
     if [  $1 -ne 0 ]; then  
